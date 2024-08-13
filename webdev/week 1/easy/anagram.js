@@ -6,7 +6,7 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-anagram`
 */
-
+//Approach 1:
 function isAnagram(str1, str2) {
     //first remove the space and convert in lowercase
     const clearStr1=str1.replace(/\s/g, '').toLowerCase();
@@ -19,13 +19,39 @@ function isAnagram(str1, str2) {
     return sortStr1===sortStr2
 }
 
-let str1='listen';
-let str2='silent';
+//Approach 2 count character
+function isAnagram2(str1, str2){
+    //step 1:first create object to count char
+    const charCount={};
 
-if(isAnagram(str1, str2)){
-    console.log("both string is anagram");
+    //step 2: count charcter of str1
+    for(char of str1){
+        charCount[char]=(charCount[char] || 0)+1;
+    }
+    //step 3: substract charachter from the str2
+    for(char of str2){
+        if(!charCount[char]){
+            return false;
+        }
+        charCount[char]--;
+    }
+
+    //step 4: check all the char are 0 or not, 0 means it is panagram
+    for(const count of Object.values(charCount)){
+        if(count!=0){
+            return false;
+        }
+    }
+
+    return true;
+}
+let str1='pidarp';//'listen';
+let str2='pradip';//'silent';
+
+if(isAnagram2(str1, str2)){
+    console.log("The two strings are anagrams of each other.");
 }else{
-    console.log("both string are not anagram");
+    console.log("The two strings are not anagram !");
 }
 
 module.exports = isAnagram;
