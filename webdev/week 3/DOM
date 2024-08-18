@@ -1,0 +1,7 @@
+what is dom?
+=> The DOM, or document object model, is programming interface for web document.
+=> it represents the structure of a web page as a tree of object.
+
+why dom?
+=> the dom abstract the structure of the document into a tree of object allowing script to manipulate the content and structure dynamically.
+=> this abstraction enables more complex interaction and functionalities beyond just static html.

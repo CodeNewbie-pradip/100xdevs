@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deleting elements</title>
+</head>
+<body>
+    <div>
+        <h1>TO-DO list</h1>
+        <div id="todo-1">
+            <h4>1. brush a teeth</h4>
+            <button onclick="deleteTodo(1)">delete Todo</button>
+        </div>
+        <div id="todo-2">
+            <h4>2. drinking tea</h4>
+            <button onclick="deleteTodo(2)">delete Todo</button>
+        </div>
+        <div id="todo-3">
+            <h4>3. Exercise</h4>
+            <button onclick="deleteTodo(3)">delete Todo</button>
+        </div>
+        <div id="todo-4">
+            <h4>4. Eating</h4>
+            <button onclick="deleteTodo(4)">delete Todo</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Enter todo task">
+            <button onclick="addTodo">Add TO-DO</button>
+        </div>
+    </div>
+    <script>
+        function deleteTodo(index){
+            const element=document.getElementById("todo-"+index);
+            element.parentElement.removeChild(element);
+        }
+        //function deleteTodo(){
+          //  const element=document.querySelector('h4');
+            //element.parentElement.removeChild(element);
+        //}
+    </script>
+</body>
+</html>
