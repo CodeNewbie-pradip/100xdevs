@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+main {
+
+    width: 25rem;
+    height: 30rem;
+    margin-top: 5rem;
+    background-color: white;
+    box-shadow: 0px 5px 30px rgb(20, 111, 185);
+    border-radius: 20% 10% 20% 10%;
+}
+
+#libox{
+    height: 24rem;
+    overflow: auto;
+    padding: 0 15px;
+}
+
+#libox li{
+    list-style: none;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 8px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+}
+
+#deletebtn{
+    padding: 10px;
+    border-radius: 8px;
+    width: 60px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(242, 35, 35);
+    color: white;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+#editbtn{
+    width: 43px;
+    background-color: rgb(36, 183, 36);
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+#libox span{
+    display: flex;
+    gap: 10px;
+    width: 20px;
+}
+
+#inputArea{
+    background-color: blueviolet;
+    padding: 12px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.25rem;
+}
+
+input{
+    font-size: 15px;
+    padding: 10px;
+    width:70%;
+    border-radius:8px;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    padding: 10px;
+    border-radius: 8px;
+    width: 20%;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    background-color: rgb(139, 223, 13);
+    color:white;
+
+    &:hover{
+        opacity:0.8px;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+/*track*/
+::-webkit-scrollbar-track{
+    background: #f1f1f1;;
+}
+
+/*handle*/
+::-webkit-scrollbar-thumb{
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 400px) {
+    body {
+        overflow: hidden;
+    }
+
+    main {
+        width: 22rem;
+        height: 23rem;
+
+    }
+
+    #libox {
+        height: 17rem;
+    }
+
+    #inputArea {
+        margin-top: 37px;
+
+    }
+
+    #inputArea input {
+        width: 60%;
+        font-size: 13px;
+    }
+
+    #inputArea button {
+        width: 25%;
+        font-size: 13px;
+    }
+}
