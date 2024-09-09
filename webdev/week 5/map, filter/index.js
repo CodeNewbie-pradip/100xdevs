@@ -18,10 +18,26 @@ for(let i=0; i<input.length; i++){
 }
 console.log(newArray);
 
-//other solutoon using map
-function transform(i){
+//other solution using map
+const output=input.map(function transform(i){
     return 2*i;
-}
-
-const output=input.map(transform);
+});
 console.log(output);
+
+//filter function
+const newBrr=[];
+for(let i=0; i<input.length; i++){
+    if(input[i]%2==0){
+        newBrr.push(input[i]);
+    }
+}
+console.log(newBrr);
+
+const ans1=input.filter((n)=>{
+    if(n%2){
+        return true;
+    }else{
+        return false;
+    }
+});
+console.log(ans1);
