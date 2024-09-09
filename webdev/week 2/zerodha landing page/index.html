@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zerodha</title>
-    <
 </head>
-<body>
-    <div style="display: flex; justify-content:space-between; margin-left:100px; margin-right:100px;">
-        <div style="padding:20px;">
-            <img src="zerodhalogo.svg" width="170px">
+<body style="display: flex; flex-direction: column;">
+    <nav style="display: flex; justify-content:space-between; padding:40px; ">
+        <div class="logo" style="padding:10px;">
+            <img src="logo.svg" width="150px">
         </div>
-        <div style="display:flex;">
-            <span style="cursor: pointer; font-size:medium; padding:20px;"> Signup </span>
-            <span style="cursor:pointer; font-size:medium; padding:20px;"> Products </span>
-            <span style="cursor:pointer; font-size:medium; padding:20px;"> Support </span>
-            <span style="cursor:pointer; font-size:medium; padding:20px;"> Pricing </span>
-            <span style="cursor:pointer; font-size:medium; padding:20px;"> About </span>
+        <div class="ul" style="display: flex; justify-content:space-between;right-padding:150px; ">
+                <div style="padding:10px;">Signup</div>
+                <div style="padding:10px;">About</div>
+                <div style="padding:10px">Product</div>
+                <div style="padding:10px">Pricing</div>
+                <div style="padding:10px">Support</div>
         </div>
-    </div>
-    <div style="display: flex; justify-content:center">
-        <img src="zerodha.png" width="800">
-    </div>
-    <div>
-        <h1>invest in everything</h1>
-    </div>
-    <div>
-        <p>Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.</p>
-    </div>
-    <div>
-        <button style="background-color: rgb(95, 95, 253); border-radius:10px; border-color:dodgerblue">Sign up now</button>
-    </div>
+    </nav>
+    <main style="display: flex; flex-direction: column; height: 65vh;
+    width: 100vw; justify-content: center; align-items: center; left-padding:150px; ">
+        <div class="banner">
+            <img src="landing.png" width="700px">
+        </div>
+        <div style="display:flex; justify-content: center;">
+            <h1>Invest in Everything</h1>
+        </div>
+        <div style="display:flex; justify-content:center;">
+            <button class="signup">Sign up now</button>
+        </div>
+    </main>
 </body>
 </html>

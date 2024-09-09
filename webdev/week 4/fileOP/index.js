@@ -12,7 +12,7 @@ app.get('/files', (req, res)=>{
         if(err){
             return res.status(500).json({message: 'unable to scan files!'});
         }
-        res.status(200).json(file);
+        res.status(200).json(files);
     });
 });
 
